@@ -17,7 +17,7 @@
       <hr class="my-4">
       <form action="/" method="post" id="uploadForm" enctype="multipart/form-data">
         <div class="custom-file">
-          <input type="file" class="custom-file-input" id="resumeInput" name="resume" accept=".xlsx"
+          <input type="file" class="custom-file-input" id="resumeInput" name="file" accept=".xlsx"
             onchange="updateFileName()">
           <label class="custom-file-label" for="resumeInput">Choose file (Excel only)</label>
         </div>
@@ -50,6 +50,11 @@
         {% else %}
             <p class="text-center">No teams formed yet. Please upload an Excel file.</p>
         {% endif %}
+    </div>
+    <div>
+       {% if message %}
+       <strong> {{ message }}</strong>
+       {% endif %}
     </div>
       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
