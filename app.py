@@ -6,6 +6,7 @@ import random
 import uuid   
 
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['SECRET_KEY'] = "BAD_DEVELOPER"
